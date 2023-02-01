@@ -1,0 +1,22 @@
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "Employee database",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beckamcnally/employeeTracker.git"
+  },
+  "author": "Becka McNally",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beckamcnally/employeeTracker/issues"
+  },
+  "homepage": "https://github.com/beckamcnally/employeeTracker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
