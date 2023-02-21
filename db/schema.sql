@@ -14,14 +14,14 @@ DROP TABLE IF EXISTS role;
 CREATE TABLE role (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   role_title VARCHAR(30) NOT NULL,
-  role_salary DECIMAL(4, 2),
+  role_salary INT,
   department_id INT,
   FOREIGN KEY (department_id)
   REFERENCES department(id)
   ON DELETE SET NULL
 );
 
-DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS employees;
 CREATE TABLE employees (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30) NOT NULL,
