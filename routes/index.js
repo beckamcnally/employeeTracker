@@ -1,12 +1,13 @@
 
 const miniApp = require('express').Router();
-const movieRouter = require('./employee');
-const reviewRouter = require('./department');
-const movieRouter = require('./role');
+const employeeRouter = require('./employee');
+const departmentRouter = require('./department');
+const roleRouter = require('./role');
 
 
 
-miniApp.use('/movies', movieRouter);
-miniApp.use('/reviews', reviewRouter);
+miniApp.use('/roles', roleRouter);
+miniApp.use('/employees', employeeRouter);
+miniApp.use('/departments', departmentRouter);
 
 module.exports = miniApp;
