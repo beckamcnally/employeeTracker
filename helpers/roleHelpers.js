@@ -1,3 +1,7 @@
+const inquirer = require("inquirer")
+const conTable = require('console.table');
+const db = require('../connection/config')
+
 
 const viewRoles = () => {
   console.log('in role helper')

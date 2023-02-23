@@ -1,29 +1,25 @@
-// const departmentRoute = require('express').Router();
-// const mysql = require('mysql2')
-// const connect = require({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'password',
-//   database: 'company_db'
-// });
+const departmentRoute = require('express').Router();
+const mysql = require('mysql2')
+const db = require('../connection/config')
 
 
-// connect.get("/", (req, res) => {
 
-// });
-
-
-// connect.post("/adddepartment", (req, res) => {
-
-// });
-
-// connect.put("/update/id", (req, res) => {
-
-// });
-
-// connect.delete("/delete/id", (req, res) => {
-
-// });
+db.get("/", (req, res) => {
+console.log("view all department routes")
+});
 
 
-// module.exports = departmentRoute
+db.post("/addDepartment", (req, res) => {
+  console.log("add a department routes")
+});
+
+db.put("/update/id", (req, res) => {
+  console.log("update a department routes")
+});
+
+db.delete("/delete/id", (req, res) => {
+  console.log("delete a department routes")
+});
+
+
+module.exports = departmentRoute

@@ -1,28 +1,27 @@
-// const roleRoute = require('express').Router();
-// const mysql = require('mysql2')
-// const connect = require({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'password',
-//   database: 'company_db'
-// });
-
-// connect.get("/", (req, res) => {
-
-// });
+const roleRoute = require('express').Router();
+const mysql = require('mysql2')
+const db = require('../connection/config')
 
 
-// connect.post("/addrole", (req, res) => {
+db.get("/", (req, res) => {
+  console.log("view all role")
 
-// });
-
-// connect.put("/update/id", (req, res) => {
-
-// });
-
-// connect.delete("/delete/id", (req, res) => {
-
-// });
+});
 
 
-// module.exports = roleRoute
+db.post("/addrole", (req, res) => {
+  console.log("add a role")
+});
+
+db.put("/update/id", (req, res) => {
+  console.log("update a role")
+
+});
+
+db.delete("/delete/id", (req, res) => {
+  console.log("delete a role")
+
+});
+
+
+module.exports = roleRoute

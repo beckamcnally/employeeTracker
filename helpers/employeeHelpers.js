@@ -1,4 +1,6 @@
-
+const inquirer = require("inquirer")
+const conTable = require('console.table');
+const db = require('../connection/config')
 
 const addEmployee = () => {
 console.log('in employee helper')
@@ -15,6 +17,7 @@ const deleteEmployee = () => {
 
 const viewUnsortedEmp = () => {
   console.log('in employee helper')
+
 };
 
 const viewEmpByDept = () => {

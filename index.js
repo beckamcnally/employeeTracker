@@ -1,13 +1,8 @@
 const inquirer = require("inquirer")
-const {viewDepartments, addDepartment, updateDepartment, deleteDepartment } = require('./middleware/departmentHelper')
-const {addEmployee, updateEmployee, deleteEmployee, viewUnsortedEmp, viewEmpByDept, viewEmpByMgr, viewAggregateOfSalaries} = require('./middleware/employeeHelpers')
-const {viewRoles, addRole, updateRole, deleteRole} = require('./middleware/roleHelpers')
-// const connect = require({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'password',
-//   database: 'company_db'
-// });
+const {viewDepartments, addDepartment, updateDepartment, deleteDepartment } = require('./helpers/departmentHelper')
+const {addEmployee, updateEmployee, deleteEmployee, viewUnsortedEmp, viewEmpByDept, viewEmpByMgr, viewAggregateOfSalaries} = require('./helpers/employeeHelpers')
+const {viewRoles, addRole, updateRole, deleteRole} = require('./helpers/roleHelpers')
+const db = require('./connection/config')
 
 questions()
 function questions() {

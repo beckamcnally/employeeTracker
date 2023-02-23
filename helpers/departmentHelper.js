@@ -1,3 +1,7 @@
+const inquirer = require("inquirer")
+const conTable = require('console.table');
+const db = require('../connection/config')
+
 
 const viewDepartments = () => {
   console.log('in department helper')

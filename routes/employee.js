@@ -1,38 +1,40 @@
-// const employeeRoute = require('express').Router();
-// const mysql = require('mysql2')
-// const connect = require({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'password',
-//   database: 'company_db'
-// });
+const employeeRoute = require('express').Router();
+const mysql = require('mysql2')
+const db = require('../connection/config')
 
-// connect.get("/", (req, res) => {
 
-// });
+db.get("/", (req, res) => {
+  console.log("view all employees unsorted")
+  
+});
 
-// connect.get("/manager_id", (req, res) => {
+db.get("/manager_id", (req, res) => {
+  console.log("view all employees sorted by manager")
+});
 
-// });
+db.get("/department_id", (req, res) => {
+  console.log("view all employees sorted by department")
 
-// connect.get("/department_id", (req, res) => {
+});
 
-// });
+db.get("/salary-total", (req, res) => {
+  console.log("view aggregate of all employees salary")
 
-// connect.get("/salary-total", (req, res) => {
+});
 
-// });
+db.post("/addemployee", (req, res) => {
+  console.log("add an employee")
 
-// connect.post("/addemployee", (req, res) => {
+});
 
-// });
+db.put("/update/id", (req, res) => {
+  console.log("update an employee")
 
-// connect.put("/update/id", (req, res) => {
+});
 
-// });
+db.delete("/delete/id", (req, res) => {
+  console.log("delete a employee")
 
-// connect.delete("/delete/id", (req, res) => {
+});
 
-// });
-
-// module.exports = employeeRoute
+module.exports = employeeRoute
